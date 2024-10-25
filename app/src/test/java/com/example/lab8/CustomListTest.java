@@ -62,7 +62,7 @@ public class CustomListTest {
     public void deleteCityTest() {
         list = MockCityList();
         City newCity = new City("Victoria", "BC");
-        
+
         list.addCity(newCity);
         int listSize = list.getCount();
         list.deleteCity(newCity);
