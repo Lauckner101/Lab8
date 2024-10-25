@@ -68,7 +68,25 @@ public class CustomListTest {
         list.deleteCity(newCity);
 
         assertEquals(list.getCount(),listSize - 1);
+    }
 
+
+    /**
+     * add 2 cities to the list
+     * find the number of cities in the list
+     * check if getCities returns the same number
+     */
+    @Test
+    public void countCitiesTest() {
+        list = MockCityList();
+        City newCity = new City("Edmonton", "AB");
+        City secondCity = new City("Edmonton", "AB");
+
+        list.addCity(newCity);
+        list.addCity(secondCity);
+        int listSize = list.getCount();
+
+        assertEquals(list.countCities(),listSize - 1);
     }
 
 
