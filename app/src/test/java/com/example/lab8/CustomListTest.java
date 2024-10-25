@@ -52,5 +52,26 @@ public class CustomListTest {
         assertTrue(list.hasCity(newCity));
     }
 
+    /**
+     * add a city to the list
+     * find the number of cities in the list
+     * delete a city
+     * check if the list has the right number of cities
+     */
+    @Test
+    public void deleteCityTest() {
+        list = MockCityList();
+        City newCity = new City("Victoria", "BC");
+        
+        list.addCity(newCity);
+        int listSize = list.getCount();
+        list.deleteCity(newCity);
+
+        assertEquals(list.getCount(),listSize - 1);
+
+    }
+
+
+
 
 }
